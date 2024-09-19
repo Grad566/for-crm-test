@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: testCRM
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    open-in-view: false
+    output:
+      ansi:
+        enabled: always
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:devDB
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+      console.enabled: true
+      security:
+        headers:
+          frame=false:
